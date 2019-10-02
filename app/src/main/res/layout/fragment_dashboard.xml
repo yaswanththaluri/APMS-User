@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/relativeLayout2"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/activityBackground"
+    tools:context=".MainActivity">
+
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/topToolBar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/navbar_height">
+
+
+    </android.support.constraint.ConstraintLayout>
+
+    <ImageView
+        android:layout_width="@dimen/half_circle_width"
+        android:layout_height="@dimen/half_circle_height"
+        android:layout_centerHorizontal="true"
+        android:scaleType="fitStart"
+        android:src="@drawable/circle"
+        android:translationZ="@dimen/tanslation" />
+
+    <ImageView
+        android:layout_width="@dimen/logo_width"
+        android:layout_height="@dimen/logo_height"
+        android:layout_centerHorizontal="true"
+        android:paddingTop="@dimen/logo_peddingTop"
+        android:paddingBottom="@dimen/logo_peddingBottom"
+        android:scaleType="fitXY"
+        android:src="@drawable/ic_copyright_black_24dp"
+        android:translationZ="@dimen/tanslation" />
+
+    <TextView
+        android:id="@+id/text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/topToolBar"
+        android:layout_marginTop="@dimen/heart_text_marginTop"
+        android:text="@string/heart_rate"
+        android:textAlignment="center"
+        android:textColor="@color/textColorHeartRate" />
+
+    <ImageView
+        android:id="@+id/centerCircle"
+        android:layout_width="@dimen/circle_width"
+        android:layout_height="@dimen/circle_height"
+        android:layout_below="@id/text"
+        android:layout_centerHorizontal="true"
+        android:paddingTop="@dimen/circle_peddingTop"
+        android:paddingBottom="@dimen/circle_peddingBottom"
+        android:scaleType="fitCenter"
+        android:src="@drawable/middle_circle"
+        android:translationZ="@dimen/tanslation" />
+
+    <TextView
+        android:id="@+id/circleNumber"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/text"
+        android:layout_marginTop="65dp"
+        android:fontFamily="sans-serif-smallcaps"
+        android:text="@string/_84"
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:textColor="@color/darkBlack"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        android:translationZ="@dimen/tanslation" />
+
+    <TextView
+        android:id="@+id/circleText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/circleNumber"
+        android:fontFamily="sans-serif-light"
+        android:text="@string/_8pm"
+        android:textAlignment="center"
+        android:textColor="@color/textColor"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:translationZ="@dimen/tanslation" />
+
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/ractangle"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/rec_layout_height"
+        android:layout_below="@id/circleText"
+        android:layout_marginTop="@dimen/rec_layout_marginTop">
+
+        <TextView
+            android:id="@+id/leftRec"
+            android:layout_width="@dimen/rec_width"
+            android:layout_height="@dimen/rec_height"
+            android:background="@drawable/rectangles_file"
+            android:text="@string/blood_pearls"
+            android:textAlignment="center"
+            android:textColor="@color/textColorHeartRate"
+            android:textSize="20sp"
+            android:translationZ="@dimen/tanslation"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/leftName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="70dp"
+            android:layout_marginTop="40dp"
+            android:fontFamily="sans-serif-light"
+            android:text="@string/_36_6"
+            android:textColor="@color/darkBlack"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:translationZ="@dimen/tanslation"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+
+            />
+
+        <TextView
+            android:id="@+id/rightRec"
+            android:layout_width="190dp"
+            android:layout_height="99dp"
+            android:background="@drawable/rectangles_file"
+            android:text="@string/blood_presser"
+            android:textAlignment="center"
+            android:textColor="@color/textColorHeartRate"
+            android:textSize="20sp"
+            android:translationZ="@dimen/tanslation"
+            app:layout_constraintLeft_toRightOf="@id/leftRec"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/rightName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:layout_marginRight="65dp"
+            android:fontFamily="sans-serif-light"
+            android:lineSpacingExtra="0sp"
+            android:text="@string/_130_85"
+            android:textColor="@color/darkBlack"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:translationZ="@dimen/tanslation"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+    </android.support.constraint.ConstraintLayout>
+
+</RelativeLayout>
