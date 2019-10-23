@@ -12,6 +12,7 @@
     <android.support.constraint.ConstraintLayout
         android:id="@+id/topToolBar"
         android:layout_width="match_parent"
+        android:background="@drawable/line"
         android:layout_height="@dimen/navbar_height">
 
 
@@ -41,7 +42,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/topToolBar"
         android:layout_marginTop="@dimen/heart_text_marginTop"
-        android:text="@string/heart_rate"
+        android:text="Parking status"
         android:textAlignment="center"
         android:textColor="@color/textColorHeartRate" />
 
@@ -58,13 +59,13 @@
         android:translationZ="@dimen/tanslation" />
 
     <TextView
-        android:id="@+id/circleNumber"
+        android:id="@+id/slotNumber"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/text"
         android:layout_marginTop="65dp"
         android:fontFamily="sans-serif-smallcaps"
-        android:text="@string/_84"
+        android:text="@string/slot_no"
         android:textAlignment="center"
         android:textAllCaps="true"
         android:textColor="@color/darkBlack"
@@ -76,9 +77,9 @@
         android:id="@+id/circleText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/circleNumber"
+        android:layout_below="@id/slotNumber"
         android:fontFamily="sans-serif-light"
-        android:text="@string/_8pm"
+        android:text="@string/slot_text"
         android:textAlignment="center"
         android:textColor="@color/textColor"
         android:textSize="20sp"
@@ -86,73 +87,30 @@
         android:translationZ="@dimen/tanslation" />
 
 
-    <android.support.constraint.ConstraintLayout
-        android:id="@+id/ractangle"
-        android:layout_width="wrap_content"
-        android:layout_height="@dimen/rec_layout_height"
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="150dp"
+        android:layout_marginRight="25dp"
+        android:layout_marginLeft="25dp"
         android:layout_below="@id/circleText"
-        android:layout_marginTop="@dimen/rec_layout_marginTop">
+        android:textColor="@android:color/white"
+        android:background="@drawable/signin_btn_rounded"
+        android:id="@+id/park_now_btn"
+        android:text="@string/park_now"/>
 
-        <TextView
-            android:id="@+id/leftRec"
-            android:layout_width="@dimen/rec_width"
-            android:layout_height="@dimen/rec_height"
-            android:background="@drawable/rectangles_file"
-            android:text="@string/blood_pearls"
-            android:textAlignment="center"
-            android:textColor="@color/textColorHeartRate"
-            android:textSize="20sp"
-            android:translationZ="@dimen/tanslation"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <TextView
-            android:id="@+id/leftName"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="70dp"
-            android:layout_marginTop="40dp"
-            android:fontFamily="sans-serif-light"
-            android:text="@string/_36_6"
-            android:textColor="@color/darkBlack"
-            android:textSize="20sp"
-            android:textStyle="bold"
-            android:translationZ="@dimen/tanslation"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-
-            />
-
-        <TextView
-            android:id="@+id/rightRec"
-            android:layout_width="190dp"
-            android:layout_height="99dp"
-            android:background="@drawable/rectangles_file"
-            android:text="@string/blood_presser"
-            android:textAlignment="center"
-            android:textColor="@color/textColorHeartRate"
-            android:textSize="20sp"
-            android:translationZ="@dimen/tanslation"
-            app:layout_constraintLeft_toRightOf="@id/leftRec"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <TextView
-            android:id="@+id/rightName"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="40dp"
-            android:layout_marginRight="65dp"
-            android:fontFamily="sans-serif-light"
-            android:lineSpacingExtra="0sp"
-            android:text="@string/_130_85"
-            android:textColor="@color/darkBlack"
-            android:textSize="20sp"
-            android:textStyle="bold"
-            android:translationZ="@dimen/tanslation"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:layout_marginRight="25dp"
+        android:id="@+id/depart_btn"
+        android:textColor="@android:color/white"
+        android:background="@drawable/signin_btn_rounded"
+        android:layout_marginLeft="25dp"
+        android:layout_below="@id/park_now_btn"
+        android:text="@string/depart"/>
 
 
-    </android.support.constraint.ConstraintLayout>
 
 </RelativeLayout>
